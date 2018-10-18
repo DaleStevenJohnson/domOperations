@@ -87,7 +87,14 @@ let dom = {
 	changeElementBackgroundImage: function(e, source) {
 		e = this.getElement(e);
 		e.style.backgroundImage = `url(${source})`;
-	}
+	},
+	
+	capitaliseFirstLetter(word) {
+		capitalisedWord = word
+		capital = word[0].toUpperCase();
+		capitalisedWord = capital;
+		return capitalisedWord;
+	},
 
 
 }
