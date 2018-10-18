@@ -92,7 +92,7 @@ let dom = {
 	capitaliseFirstLetter(word) {
 		capitalisedWord = word
 		capital = word[0].toUpperCase();
-		capitalisedWord = capital;
+		capitalisedWord[0] = capital;
 		return capitalisedWord;
 	},
 
