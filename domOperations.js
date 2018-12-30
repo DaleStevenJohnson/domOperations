@@ -47,6 +47,7 @@ let dom = {
 		}
 	},
 	killElement: function(e) {
+		e = this.getElement(e);
 		e.parentNode.removeChild(e);
 	},
 	iframeLoaded: function(iframe) {
