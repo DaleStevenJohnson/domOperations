@@ -51,9 +51,11 @@ let dom = {
 		e.parentNode.removeChild(e);
 	},
 	killClass: function(classname) {
-		classes = document.getElementsByClassName(classname);
-		for (let c of classes) {
-			this.killElement(c);
+		for (let i = 0; i < 3; i ++) {
+			classes = document.getElementsByClassName(classname);
+			for (let c of classes) {
+				this.killElement(c);
+			}
 		}
 	},
 	iframeLoaded: function(iframe) {
