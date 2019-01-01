@@ -55,7 +55,7 @@ let dom = {
 		for (let c of classes) {
 			this.killElement(c);
 		}
-	}
+	},
 	iframeLoaded: function(iframe) {
 		let parent = iframe.parentElement
 		this.showElement(parent);
