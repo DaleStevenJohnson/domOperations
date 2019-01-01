@@ -50,6 +50,12 @@ let dom = {
 		e = this.getElement(e);
 		e.parentNode.removeChild(e);
 	},
+	killClass: function(classname) {
+		classes = document.getElementsByClassName(classname);
+		for (let c of classes) {
+			this.killElement(c);
+		}
+	}
 	iframeLoaded: function(iframe) {
 		let parent = iframe.parentElement
 		this.showElement(parent);
