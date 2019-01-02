@@ -64,9 +64,13 @@ let dom = {
 		let a = iframe.contentWindow.document.body.scrollHeight;
 		let b = 50;
 		iframe.style.height = (a+b) + "px";
-        this.hideElement(parent);
-        iframe.contentWindow.document.body.style.overflowY = "hidden";
+       		this.hideElement(parent);
+        	iframe.contentWindow.document.body.style.overflowY = "hidden";
   	},
+	loadiframeContent: function(page, frameID) {
+		iframe = document.getElementById(frameID);
+		iframe.src = page;
+	}
   	getImageSize: function (img, callback) {
   		console.log(img);
 	    let wait = setInterval(
