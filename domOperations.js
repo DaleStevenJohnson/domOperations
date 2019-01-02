@@ -70,7 +70,7 @@ let dom = {
 	loadiframeContent: function(page, frameID) {
 		iframe = document.getElementById(frameID);
 		iframe.src = page;
-	}
+	},
   	getImageSize: function (img, callback) {
   		console.log(img);
 	    let wait = setInterval(
