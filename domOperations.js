@@ -13,43 +13,51 @@ let dom = {
 		}
 		return a;
 	},
+	
 	hideElement: function(e) {
 		e = this.getElement(e);
 		e.style.visibility = "hidden";
 		e.style.display = "none";
 	},
+	
 	hideElements: function(arr) {
 		for(let a of arr) {
 			this.hideElement(a);
 		}
 	},
+	
 	hideAShowB: function(a, b) {
 		a = this.getElement(a);
 		b = this.getElement(b);
 		this.hideElement(a);
 		this.showElement(b);
 	},
+	
 	showElement: function(e) {
 		e = this.getElement(e);
 		e.style.visibility = "visible";
 		e.style.display = "block";
 	},
+	
 	hideChildren: function(e) {
 		e = this.getElement(e);
 		for (let i = e.children.length-1; i >= 0; i--) {
 			this.hideElement(e.children[i]);
 		}
 	},
+	
 	killChildren: function(e) {
 		e = this.getElement(e);
 		for (let i = e.children.length-1; i >= 0; i--) {
 			e.removeChild(e.children[i]);
 		}
 	},
+	
 	killElement: function(e) {
 		e = this.getElement(e);
 		e.parentNode.removeChild(e);
 	},
+	
 	killClass: function(classname) {
 		for (let i = 0; i < 3; i ++) {
 			classes = document.getElementsByClassName(classname);
@@ -58,6 +66,7 @@ let dom = {
 			}
 		}
 	},
+	
 	iframeLoaded: function(iframe) {
 		let parent = iframe.parentElement
 		this.showElement(parent);
@@ -67,10 +76,12 @@ let dom = {
        		this.hideElement(parent);
         	iframe.contentWindow.document.body.style.overflowY = "hidden";
   	},
+	
 	loadiframeContent: function(page, frameID) {
 		iframe = document.getElementById(frameID);
 		iframe.src = page;
 	},
+	
   	getImageSize: function (img, callback) {
   		console.log(img);
 	    let wait = setInterval(
@@ -85,6 +96,7 @@ let dom = {
 	    	}, 
 	    30);
 	},
+	
 	inputIsClean: function(string) {
 		let a = new RegExp(/[<>*&|=\]\/]/);
 		 return !a.test(string);
@@ -108,6 +120,7 @@ let dom = {
 		capitalisedWord[0] = capital;
 		return capitalisedWord;
 	},
+	
 	onload(callback) {
 		if(window.addEventListener){
 			window.addEventListener('load',callback,false);
